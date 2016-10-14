@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Game5</title>
+
+  <script src="libs/require.min.js" data-main="src/game5editor.min"></script>
+  
+  <style type="text/css">
+    #board {
+      border-spacing: 0px;
+      overflow: scroll;
+    }
+    .tileboard td {
+      width: 32px;
+      height: 32px;
+      padding: 0px;
+    }
+    .tileboard .empty {
+      background: black;
+    }
+    .tileboard .rock {
+      background:url(assets/tile_rock.png) no-repeat;
+    }
+    .tileboard .dirt {
+      background:url(assets/tile_dirt.png) no-repeat;
+    }
+    .tileboard .diamond {
+      background:url(assets/tile_tres.png) no-repeat;
+    }
+    .tileboard .enemyQ {
+      background:url(assets/tile_enemyq.png) no-repeat;
+    }
+    .tileboard .exit {
+      background:url(assets/tile_exit.png) no-repeat;
+    }
+    .tileboard .rock {
+      background:url(assets/tile_rock.png) no-repeat;
+    }
+    .tileboard .danger {
+      background:url(assets/tile_dan.png) no-repeat;
+    }
+    .tileboard .player {
+      background:url(assets/tile_play.png) no-repeat;
+    }
+    #palette td.active {
+      border: 2px solid red;; 
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Game5 Level Editor</h1>
+    <div>
+      <div id="dims">
+        Dimensions: <input type="text" id="dimX"/>x<input type="text" id="dimY"/>
+      </div>
+      <div id="other">
+        WinScore: <input type="text" id="winScore"/><br/>
+        MaxTime: <input type="text" id="maxTime"/><br/>
+      </div>
+      <div id="actions">
+        <button id="load">Load</button>
+        <button id="generate">Generate</button>
+      </div>
+    </div>
+  </div>
+  <table id="palette" class="tileboard">
+    <tr>
+      <td class="rock" type="rock"></td>
+      <td class="dirt" type="dirt"></td>
+      <td class="empty" type="empty"></td>
+      <td class="diamond active" type="diamond"></td>
+      <td class="danger" type="danger"></td>
+      <td class="enemyQ" type="enemyQ"></td>
+      <td class="exit" type="exit"></td>
+      <td class="player" type="player"></td>
+    </tr>
+  </table>
+  <table id="board" class="tileboard">
+    <tbody/>
+  </table>
+  <textarea id="textContent" rows="100" cols="360">
+  {
+      "width": 16,
+      "height": 16,
+      "tiles": ["#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#",
+                "#",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",
+                "#",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",
+                "#",".",".",".",".",".",".",".",".",".",".",".",".",".",".","#",
+                "#",".",".","#",".","#"," ","#",".","#",".",".",".",".","#","#",
+                "#",".",".","#"," ","#"," ","#","Q","#",".",".",".","#",".","#",
+                "#",".",".","#","Q","#",".","#","+","#",".",".",".","#",".","#",
+                "#",".",".","#","+","#",".","#","#","#",".",".","#",".",".","#",
+                "#",".",".","#","#","#",".",".",".",".",".",".","#",".",".","#",
+                "#",".",".",".",".",".",".",".",".",".",".","#",".",".",".","#",
+                "#","#","#","#","#","#","#","."," ",".",".","#",".",".",".","#",
+                "#","#"," ","Q"," "," "," "," "," ",".",".",".",".",".",".","#",
+                "E","."," ","#","#","#",".","#"," ",".",".",".",".",".",".","#",
+                "#","#"," ","#",".",".",".","#"," ",".",".",".","#",".",".","#",
+                "#","#","+","#",".",".",".","."," "," "," "," ","#","+","+","#",
+                "#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#"],
+      "player": {
+        "x": 10,
+        "y": 9
+      },
+      "winScore": 5,
+      "maxTime": 120
+    }
+  </textarea>
+  Prefix:
+  <input id="testPrefix" type="text" value="file:///D:/Game5/Repo/index.html?lvlDef=" style="width: 100%"/><br/>
+  Test format:
+  <input id="testURL" type="text" style="width: 100%"/> 
+</body>
+</html>
