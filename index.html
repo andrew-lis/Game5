@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Game5</title>
+  
+  <style>
+    * { margin:0; padding:0; }
+    html, body { width:100%; height:100%; }
+    canvas { display:block; }
+  </style>
+  
+  <script type="text/javascript">
+    window.requireNode = window.require;
+    window.require = undefined; 
+  </script>
+  
+  <!-- build:[data-main] src/game5.min -->
+  <script src="libs/require.min.js" data-main="src/start"></script>
+  <!-- /build -->
+</head>
+<body>
+  <canvas id="view" width="640" height="384" style="background-color: gray;">
+    HTML5 Canvas must be supported.
+  </canvas>
+</body>
+</html>

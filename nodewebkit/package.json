@@ -1,0 +1,11 @@
+{
+  "name": "Game5",
+  "description": "Game5 Workers",
+  "version": "0.1",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+    "width": 640,
+    "height": 384
+  }
+}

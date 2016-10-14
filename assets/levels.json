@@ -1,0 +1,9 @@
+require("Levels").setLevelsManifest([
+  "lvlt1.json",
+  "lvl0.json",
+  "lvl1.json",
+  "lvl2.json",
+  "lvl3.json",
+  "lvl4.json",
+  "lvl5.json"
+]);
